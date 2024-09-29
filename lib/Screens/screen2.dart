@@ -32,22 +32,24 @@ class _ImagesgeneratedState extends State<Imagesgenerated> {
                     mainAxisAlignment:
                         MainAxisAlignment.center, // Centers the row content
                     children: [
-                      const Expanded(
+                      Expanded(
                         child: Text(
-                          "These are some of the images that might suit your idea",
-                          style: TextStyle(
+                          "                              These are some of the images that might suit your idea",
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
-                          textAlign: TextAlign.center,
+                          textAlign: TextAlign.center, // Center the text
                         ),
                       ),
                       const SizedBox(width: 20),
                       Textbutton(
                         Inputtext: "Proceed",
-                        onTap: () {},
-                      )
+                        onTap: () {
+                          // Define your onTap action here
+                        },
+                      ),
                     ],
                   ),
                 ),
@@ -56,7 +58,7 @@ class _ImagesgeneratedState extends State<Imagesgenerated> {
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         Containercustom(),
                         SizedBox(width: 16), // Spacing between containers
                         Containercustom(),
@@ -67,7 +69,7 @@ class _ImagesgeneratedState extends State<Imagesgenerated> {
                     const SizedBox(height: 16), // Spacing between rows
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         Containercustom(),
                         SizedBox(width: 16),
                         Containercustom(),
@@ -77,31 +79,28 @@ class _ImagesgeneratedState extends State<Imagesgenerated> {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 30,
-                ),
+                const SizedBox(height: 30),
                 Container(
                   width: 600,
                   decoration: BoxDecoration(
                     color: const Color.fromARGB(89, 255, 255, 255),
                     // Background color of the text field
-                    borderRadius: BorderRadius.circular(20),
-
-                    // Rounded corners
+                    borderRadius: BorderRadius.circular(20), // Rounded corners
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 15, right: 10),
                     child: TextField(
                       controller: searchbarController,
                       decoration: InputDecoration(
-                          border: InputBorder.none,
-                          suffixIcon: Icon(
-                            Icons.generating_tokens,
-                            color: Colors.white,
-                          )),
+                        border: InputBorder.none,
+                        suffixIcon: Icon(
+                          Icons.generating_tokens,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),

@@ -1,4 +1,5 @@
 import 'package:camoa/Screens/screen2.dart';
+import 'package:camoa/Screens/screen3.dart';
 import 'package:flutter/material.dart';
 
 import 'Screens/screen1.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Screen1(),
+      home: Textsuggest(),
     );
   }
 }

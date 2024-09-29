@@ -29,12 +29,12 @@ class _Screen1State extends State<Screen1> {
                 SizedBox(height: 140),
                 Center(
                     child: Text(
-                      "The Gen-AI Based Solution For Your",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25),
-                    )),
+                  "The Gen-AI Based Solution For Your",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25),
+                )),
                 Text(
                   "Campaigning Needs",
                   style: TextStyle(
@@ -49,7 +49,8 @@ class _Screen1State extends State<Screen1> {
                   width: 720,
                   height: 38,
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.2), // Background color of the text field
+                    color: Colors.white
+                        .withOpacity(0.2), // Background color of the text field
                     borderRadius: BorderRadius.circular(20),
                     // Rounded corners
                   ),
@@ -58,7 +59,7 @@ class _Screen1State extends State<Screen1> {
                     child: TextField(
                       controller: searchbarController,
                       cursorColor: Colors.white,
-                      style: TextStyle(color:Colors.white),
+                      style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         suffixIcon: Icon(
                           Icons.search,
@@ -87,17 +88,18 @@ class _Screen1State extends State<Screen1> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Padding(
-
-                    padding: const EdgeInsets.only(left: 30 ,right: 30),
+                    padding: const EdgeInsets.only(left: 30, right: 30),
                     child: GridView.count(
                       crossAxisCount: 4, // 4 items per row
                       shrinkWrap: true, // Let GridView fit the available space
-                      physics: NeverScrollableScrollPhysics(), // Disable GridView scrolling
+                      physics:
+                          NeverScrollableScrollPhysics(), // Disable GridView scrolling
                       crossAxisSpacing: 40,
                       mainAxisSpacing: 30,
                       children: List.generate(8, (index) {
                         return Container(
-                          height: 100, // Set a specific height for each item to avoid overflow
+                          height:
+                              100, // Set a specific height for each item to avoid overflow
                           decoration: BoxDecoration(
                             color: Colors.white.withOpacity(0.2),
                             borderRadius: BorderRadius.circular(10),
