@@ -1,3 +1,4 @@
+import 'package:camoa/Screens/screen2.dart';
 import 'package:flutter/material.dart';
 
 TextEditingController searchbarController = TextEditingController();
@@ -57,7 +58,13 @@ class _Screen1State extends State<Screen1> {
                     controller: searchbarController,
                     decoration: InputDecoration(
                         border: InputBorder.none,
-                        suffixIcon: Icon(Icons.search)),
+                        suffixIcon: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Imagesgenerated(),
+                              ));
+                            },
+                            child: Icon(Icons.search))),
                   ),
                 ),
               )

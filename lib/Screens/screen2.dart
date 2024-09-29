@@ -1,3 +1,4 @@
+import 'package:camoa/Screens/screen1.dart';
 import 'package:camoa/components/container.dart'; // Assuming Containercustom is defined here
 import 'package:camoa/components/txtbutton.dart';
 import 'package:flutter/material.dart';
@@ -75,6 +76,31 @@ class _ImagesgeneratedState extends State<Imagesgenerated> {
                       ],
                     ),
                   ],
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Container(
+                  width: 600,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(89, 255, 255, 255),
+                    // Background color of the text field
+                    borderRadius: BorderRadius.circular(20),
+
+                    // Rounded corners
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 15, right: 10),
+                    child: TextField(
+                      controller: searchbarController,
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          suffixIcon: Icon(
+                            Icons.generating_tokens,
+                            color: Colors.white,
+                          )),
+                    ),
+                  ),
                 )
               ],
             ),

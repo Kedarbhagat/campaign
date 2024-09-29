@@ -8,9 +8,9 @@ class Containercustom extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: 290,
-        width: 255,
-        color: Colors.grey,
+        height: 200,
+        width: 240,
+        color: const Color.fromARGB(86, 158, 158, 158),
       ),
     );
   }

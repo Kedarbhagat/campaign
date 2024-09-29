@@ -11,13 +11,17 @@ class Textbutton extends StatelessWidget {
       onTap: onTap,
       child: Container(
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(10)),
+              color: const Color.fromARGB(255, 255, 255, 255),
+              borderRadius: BorderRadius.circular(10)),
           child: Padding(
             padding: EdgeInsets.all(10),
             child: Text(
               Inputtext,
               style: TextStyle(color: const Color.fromARGB(255, 38, 38, 38)),
             ),
+
+
+            
           )),
     );
   }
