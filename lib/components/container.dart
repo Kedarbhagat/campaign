@@ -5,6 +5,13 @@ class Containercustom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(height: 500, width: 150, child: Image.asset(""));
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        height: 290,
+        width: 255,
+        color: Colors.grey,
+      ),
+    );
   }
 }
