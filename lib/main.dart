@@ -1,3 +1,4 @@
+import 'package:camoa/Screens/screen2.dart';
 import 'package:flutter/material.dart';
 
 import 'Screens/screen1.dart';
@@ -5,6 +6,7 @@ import 'Screens/screen1.dart';
 void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -15,5 +17,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
