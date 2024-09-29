@@ -1,4 +1,5 @@
 import 'package:camoa/components/container.dart'; // Assuming Containercustom is defined here
+import 'package:camoa/components/txtbutton.dart';
 import 'package:flutter/material.dart';
 
 class Imagesgenerated extends StatefulWidget {
@@ -24,16 +25,29 @@ class _ImagesgeneratedState extends State<Imagesgenerated> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text(
-                    "These are some of The images that might suit your idea",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                    textAlign: TextAlign.center,
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    mainAxisAlignment:
+                        MainAxisAlignment.center, // Centers the row content
+                    children: [
+                      const Expanded(
+                        child: Text(
+                          "These are some of the images that might suit your idea",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      const SizedBox(width: 20),
+                      Textbutton(
+                        Inputtext: "Proceed",
+                        onTap: () {},
+                      )
+                    ],
                   ),
                 ),
                 Column(

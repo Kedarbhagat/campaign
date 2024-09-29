@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-TextEditingController searchbarController = TextEditingController() ;
+
+TextEditingController searchbarController = TextEditingController();
+
 class Screen1 extends StatefulWidget {
   const Screen1({super.key});
 
@@ -23,30 +25,46 @@ class _Screen1State extends State<Screen1> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 140,) ,
-              Center(child: Text("The Gen-AI Based Solution For Your" , style: TextStyle(color: Colors.white ,fontWeight: FontWeight.bold  , fontSize: 30),)),
-              Text("Campaigning Needs" ,style: TextStyle(color: Colors.white ,fontWeight: FontWeight.bold , fontSize: 30),) ,
-
+              SizedBox(
+                height: 140,
+              ),
+              Center(
+                  child: Text(
+                "The Gen-AI Based Solution For Your",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30),
+              )),
+              Text(
+                "Campaigning Needs",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30),
+              ),
               Container(
                 width: 600,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.5),// Background color of the text field
+                  color: Colors.white
+                      .withOpacity(0.5), // Background color of the text field
                   borderRadius: BorderRadius.circular(20),
                   // Rounded corners
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 15 ,right: 10),
+                  padding: const EdgeInsets.only(left: 15, right: 10),
                   child: TextField(
-                    controller:searchbarController ,
+                    controller: searchbarController,
                     decoration: InputDecoration(
-                      border: InputBorder.none
-                    ),
+                        border: InputBorder.none,
+                        suffixIcon: Icon(Icons.search)),
                   ),
                 ),
               )
             ],
           ),
         ),
-      ),);
+      ),
+    );
   }
 }
