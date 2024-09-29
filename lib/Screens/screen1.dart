@@ -1,8 +1,6 @@
 import 'package:camoa/Screens/screen2.dart';
 import 'package:flutter/material.dart';
 
-import '../api.dart';
-
 List<String> images = [
   "https://s3.amazonaws.com/hecker-bucket/03012f2b-aa71-44c2-974c-8d1efa0e812f",
   "https://s3.amazonaws.com/hecker-bucket/073e873f-1bc8-41f2-85e5-6f6114b13b9f",
@@ -76,9 +74,12 @@ class _Screen1State extends State<Screen1> {
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         suffixIcon: GestureDetector(
-                          onDoubleTap: () {
+                          onTap: () {
                             // fetchCurrentImage(searchbarController.text.toString());
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Imagesgenerated())) ;
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Imagesgenerated()));
                           },
                           child: Icon(
                             Icons.search,
@@ -128,16 +129,21 @@ class _Screen1State extends State<Screen1> {
                           child: Image.network(
                             images[index],
                             fit: BoxFit.cover,
-                            loadingBuilder: (BuildContext context, Widget child, ImageChunkEvent? loadingProgress) {
+                            loadingBuilder: (BuildContext context, Widget child,
+                                ImageChunkEvent? loadingProgress) {
                               if (loadingProgress == null) {
                                 return child;
                               } else {
                                 return Center(
                                   child: CircularProgressIndicator(
                                     color: Colors.white,
-                                    value: loadingProgress.expectedTotalBytes != null
-                                        ? loadingProgress.cumulativeBytesLoaded /
-                                        (loadingProgress.expectedTotalBytes ?? 1)
+                                    value: loadingProgress.expectedTotalBytes !=
+                                            null
+                                        ? loadingProgress
+                                                .cumulativeBytesLoaded /
+                                            (loadingProgress
+                                                    .expectedTotalBytes ??
+                                                1)
                                         : null,
                                   ),
                                 );
