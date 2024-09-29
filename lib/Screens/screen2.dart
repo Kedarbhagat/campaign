@@ -12,34 +12,61 @@ class _ImagesgeneratedState extends State<Imagesgenerated> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [
-        Image.asset(
-          "assets/images/Noise & Texture.jpg",
-          fit: BoxFit.cover,
-        ),
-        Center(
-          child: Column(
-            children: [
-              Text("These are some of The images that might suit your idea "),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    Containercustom(),
-                    Containercustom(),
-                    Containercustom()
-                  ]),
-                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    Containercustom(),
-                    Containercustom(),
-                    Containercustom()
-                  ]),
-                ],
-              )
-            ],
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              "assets/images/Noise & Texture.jpg",
+              fit: BoxFit.cover, // Ensures the image covers the entire screen
+            ),
           ),
-        ),
-      ]),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text(
+                    "These are some of The images that might suit your idea",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Containercustom(),
+                        SizedBox(width: 16), // Spacing between containers
+                        Containercustom(),
+                        SizedBox(width: 16),
+                        Containercustom(),
+                      ],
+                    ),
+                    const SizedBox(height: 16), // Spacing between rows
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Containercustom(),
+                        SizedBox(width: 16),
+                        Containercustom(),
+                        SizedBox(width: 16),
+                        Containercustom(),
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
