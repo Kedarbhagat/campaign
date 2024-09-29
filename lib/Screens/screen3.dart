@@ -37,12 +37,12 @@ class _TextsuggestState extends State<Textsuggest> {
                       children: [
                         Containercustom(
                           height: 600,
-                          width: 400,
+                          width: 400, imageUrl: '',
                         ),
                         SizedBox(width: 16),
                         Containercustom(
                           height: 600,
-                          width: 400,
+                          width: 400, imageUrl: '',
                         ),
                       ],
                     ),

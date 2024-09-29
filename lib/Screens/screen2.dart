@@ -64,22 +64,22 @@ class _ImagesgeneratedState extends State<Imagesgenerated> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Containercustom(imageUrl: images[0]),
+                        Containercustom(imageUrl: images[0], height: 200, width: 240),
                         const SizedBox(width: 16), // Spacing between containers
-                        Containercustom(imageUrl: images[1]),
+                        Containercustom(imageUrl: images[1], height: 200, width: 240),
                         const SizedBox(width: 16),
-                        Containercustom(imageUrl: images[2]),
+                        Containercustom(imageUrl: images[2], height: 200, width: 240),
                       ],
                     ),
                     const SizedBox(height: 16), // Spacing between rows
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Containercustom(imageUrl: images[3]),
+                        Containercustom(imageUrl: images[3], height: 200, width: 240),
                         const SizedBox(width: 16),
-                        Containercustom(imageUrl: images[4]),
+                        Containercustom(imageUrl: images[4], height: 200, width: 240),
                         const SizedBox(width: 16),
-                        Containercustom(imageUrl: images[5]),
+                        Containercustom(imageUrl: images[5], height: 200, width: 240),
                       ],
                     ),
                   ],
